@@ -1,279 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Newolve</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
-  <link rel="stylesheet" href="assets/css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Checklist</title>
+<style>
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  background: #1a1a1a;
+  color: #e1e1e1;
+}
+/* General input and textarea styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  color: #e1e1e1;
+  font-size: 1rem;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background-color: #333;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Labels for inputs */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #e1e1e1;
+}
+
+/* Existing styles omitted for brevity */
+.submit-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+button {
+  background-color: #60a5fa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4a90e2;
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.section {
+  background: #252525;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #60a5fa;
+  font-size: 1.5rem;
+  margin-top: 0;
+  border-bottom: 2px solid #404040;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background: #2d2d2d;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+li:hover {
+  transform: translateX(5px);
+  background: #333;
+}
+
+.timeline {
+  font-style: italic;
+  color: #94a3b8;
+  margin: 0.5rem 0 0 1.8rem;
+}
+
+.checkbox {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: #60a5fa;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+p {
+  color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .section {
+    padding: 1rem;
+  }
+}
+/* Loading spinner styles */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: #fff;
+  flex-direction: column;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #60a5fa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
 </head>
 <body>
-
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="#0">
-    <img src="assets/img/logo.png" alt="Global">
-    <p>Newolve</p>
-  </a>
-  <p class="device-notification--message">Newolve has so much to offer for your Business.</p>
-</div>
-
-<div class="perspective effect-rotate-left">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="#0">
-            <img src="assets/img/logo.png" alt="Global">
-            <p>Newolve</p>
-          </a>
-          <button class="header--cta cta">Hire Us</button>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>
-        </header>
-        <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Portfolio</span></li>
-            <li><span>About</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Hire us</span></li>
-          </ul>
-        </nav>
-        <ul class="l-main-content main-content">
-          <li class="l-section section section--is-active">
-            <div class="intro">
-              <div class="intro--banner">
-                <h1>Your next<br>interactive<br>experience</h1>
-                <button class="cta">Hire Us
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                  <span class="btn-background"></span>
-                </button>
-                <img src="assets/img/introduction-visual.png" alt="Welcome">
-              </div>
-              <div class="intro--options">
-                <a href="#0">
-                  <h3>Social Media  &amp; Handling</h3>
-                  <p>Boost Your Marketing Game With Our Expertise.</p>
-                </a>
-                <a href="#0">
-                  <h3>Search Engine Optimization</h3>
-                  <p>Beat Your Competition Fair and Square With Our SEO tools.</p>
-                </a>
-                <a href="#0">
-                  <h3>Cyber &amp; Security</h3>
-                  <p>Keep Safe</p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="work">
-              <h2>Selected work</h2>
-              <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-victory.jpg" alt="Victory">
-                      </div>
-                      <p class="slider--item-title">Victory</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
-                      </div>
-                      <p class="slider--item-title">Metiew &amp; Smith</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Alex Nowak</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                </ul>
-                <div class="slider--prev">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                  </g>
-                  </svg>
-                </div>
-                <div class="slider--next">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="about">
-              <div class="about--banner">
-                <h2>We<br>believe in<br>passionate<br>people</h2>
-                <a href="#0">Career
-                  <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
-                    </svg>
-                  </span>
-                </a>
-                <img src="assets/img/about-visual.png" alt="About Us">
-              </div>
-              <div class="about--options">
-                <a href="#0">
-                  <h3>Winners</h3>
-                </a>
-                <a href="#0">
-                  <h3>Philosophy</h3>
-                </a>
-                <a href="#0">
-                  <h3>History</h3>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="contact">
-              <div class="contact--lockup">
-                <div class="modal">
-                  <div class="modal--information">
-                    <p>United Kingdom</p>
-                    <a href="mailto:ouremail@gmail.com">info@newolve.com</a>
-                    <a href="tel:+148126287560"></a>
-                  </div>
-                  <ul class="modal--options">
-                    <li><a href="#0">Instagram</a></li>
-                    <li><a href="#0">Facebook</a></li>
-                    <li><a href="mailto:info@newolve.com">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="hire">
-              <h2>You want us to do</h2>
-              <!-- checkout formspree.io for easy form setup -->
-              <form class="work-request">
-                <div class="work-request--options">
-                  <span class="options-a">
-                    <input id="opt-1" type="checkbox" value="app design">
-                    <label for="opt-1">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      App Design
-                    </label>
-                    <input id="opt-2" type="checkbox" value="graphic design">
-                    <label for="opt-2">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Graphic Design
-                    </label>
-                    <input id="opt-3" type="checkbox" value="motion design">
-                    <label for="opt-3">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Motion Design
-                    </label>
-                  </span>
-                  <span class="options-b">
-                    <input id="opt-4" type="checkbox" value="ux design">
-                    <label for="opt-4">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      UX Design
-                    </label>
-                    <input id="opt-5" type="checkbox" value="webdesign">
-                    <label for="opt-5">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Webdesign
-                    </label>
-                    <input id="opt-6" type="checkbox" value="marketing">
-                    <label for="opt-6">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Marketing
-                    </label>
-                  </span>
-                </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <input type="submit" value="Send Request">
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+  <form id="projectForm">
+    <div class="logo-container">
+      <img src="Newsletter.png" alt="Company Logo">
     </div>
+    <h1>Project Checklist</h1>
+    <div class="section">
+      <h2>Front-End Features</h2>
+      <ul>
+        <li>
+          <input type="checkbox" class="checkbox" id="theme-design" name="theme_design">
+          <label for="theme-design">Theme Design - Custom design for a cohesive brand identity.</label>
+          <p class="timeline">Timeline: 2-3 weeks</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="about-us" name="about_us">
+          <label for="about-us">About Us Page - Comprehensive page detailing mission, values, and history.</label>
+          <p class="timeline">Timeline: 1 week</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="our-brands" name="our_brands">
+          <label for="our-brands">Our Brands Section - Dedicated section showcasing company brands.</label>
+          <p class="timeline">Timeline: 1 week</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="distribution-network" name="distribution_network">
+          <label for="distribution-network">Distribution Network Page - Highlighting channels and network.</label>
+          <p class="timeline">Timeline: 1 week</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="article-blogs" name="article_blogs">
+          <label for="article-blogs">Article Blogs - Blog section for publishing articles, news, and updates.</label>
+          <p class="timeline">Timeline: 2 weeks</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="forms" name="forms">
+          <label for="forms">Forms - Integration of various user interaction forms.</label>
+          <p class="timeline">Timeline: 1 week</p>
+        </li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Back-End Features</h2>
+      <ul>
+        <li>
+          <input type="checkbox" class="checkbox" id="cms-development" name="cms_development">
+          <label for="cms-development">CMS Development - Efficient content management system.</label>
+          <p class="timeline">Timeline: 3-4 weeks</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="captcha-integration" name="captcha_integration">
+          <label for="captcha-integration">CAPTCHA Integration - Enhance security by preventing automated submissions.</label>
+          <p class="timeline">Timeline: 2-3 days</p>
+        </li>
+        <li>
+          <input type="checkbox" class="checkbox" id="google-analytics" name="google_analytics">
+          <label for="google-analytics">Google Analytics & GTM Integration - Advanced tracking and analysis.</label>
+          <p class="timeline">Timeline: 1 week</p>
+        </li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Additional Information</h2>
+      <textarea id="additionalInfo" name="additional_info" placeholder="Type additional information here..." rows="5" style="width: 100%;"></textarea>
+    </div>
+    <div class="section">
+      <h2>User Information</h2>
+      <label for="userName">Name:</label>
+      <input type="text" id="userName" name="user_name" placeholder="Your name" style="width: 100%; margin-bottom: 10px;" required>
+      
+      <label for="userEmail">Email:</label>
+      <input type="email" id="userEmail" name="user_email" placeholder="Your email address" style="width: 100%;" required>
+    </div>
+  </form>
+  <div class="section">
+    <h2>Overall Project Duration</h2>
+    <p>Front-End Development: 6-8 weeks</p>
+    <p>Back-End Development: 4-5 weeks</p>
+    <p>Total Project Duration: 10-12 weeks (including testing and feedback cycles)</p>
   </div>
-  <ul class="outer-nav">
-    <li class="is-active">Home</li>
-    <li>Works</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Hire us</li>
-  </ul>
-</div>
+  <div class="submit-container">
+    <button type="button" id="submitBtn">Submit</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("FAW6Ijca5Vy0V4Qry");
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    const form = document.getElementById("projectForm");
+
+    // Get user-provided additional information, name, and email
+    const userName = form.elements["user_name"].value.trim();
+    const userEmail = form.elements["user_email"].value.trim();
+    const additionalInfo = form.elements["additional_info"].value.trim();
+
+    // Build the message content dynamically
+    let message = "Project Checklist:\n";
+    message += `- Theme Design: ${form.elements["theme_design"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- About Us: ${form.elements["about_us"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- Our Brands: ${form.elements["our_brands"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- Distribution Network: ${form.elements["distribution_network"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- Article Blogs: ${form.elements["article_blogs"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- Forms: ${form.elements["forms"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- CMS Development: ${form.elements["cms_development"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- CAPTCHA Integration: ${form.elements["captcha_integration"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `- Google Analytics: ${form.elements["google_analytics"].checked ? "Checked" : "Unchecked"}\n`;
+    message += `\nAdditional Information:\n${additionalInfo || "No additional information provided."}\n`;
+
+    // Prepare the data object to match the EmailJS template variables
+    const data = {
+      from_name: userName || "Anonymous User", // Default to "Anonymous User" if name is empty
+      user_email: userEmail,
+      message: message, // Full message content
+    };
+
+    console.log("Data being sent:", data);
+
+    // Validate required fields
+    if (!userName || !userEmail) {
+      alert("Please provide your name and email.");
+      return;
+    }
+        // Show loading symbol
+    const loadingDiv = document.createElement("div");
+    loadingDiv.id = "loading";
+    loadingDiv.innerHTML = `<div class="spinner"></div><p>Sending...</p>`;
+    document.body.appendChild(loadingDiv);
+    // Send the email using EmailJS
+    emailjs.send("service_sqmt1l7", "template_ujc0rw4", data)
+      .then(() => {
+        setTimeout(() => {
+          document.getElementById("loading").remove(); // Remove loading symbol
+          alert("Form successfully sent!");
+        }, 5000); // Show the loading symbol for 5 seconds
+      })
+      .catch((error) => {
+        setTimeout(() => {
+          document.getElementById("loading").remove(); // Remove loading symbol
+          alert("Failed to send the form. Please try again.");
+          console.error("EmailJS Error:", error);
+        }, 5000); // Show the loading symbol for 5 seconds
+      });
+  });
+</script>
+
+
 </body>
-</html>
