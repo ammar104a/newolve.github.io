@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7fcec4a-2ade-4d3f-8d08-e4ae9b59ef14" name="Changes" comment="" />
+    <list default="true" id="f7fcec4a-2ade-4d3f-8d08-e4ae9b59ef14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/apple.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/apple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/atom.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/atom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/blackberry.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/blackberry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/dropbox.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/dropbox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/envato.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/envato.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/firefox.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/firefox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/joomla.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/joomla.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/magento.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/magento.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/mozilla.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/mozilla.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/redhat.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/redhat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/ubuntu.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/ubuntu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/clients/wordpress.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/clients/wordpress.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hero-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo-footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-beetle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-grow-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-guitarist.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-palmeira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-shutterbug.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/gallery/g-woodcraft.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/grow-green.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/grow-green@2x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/guitarist.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/guitarist@2x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/lady-shutterbug.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/lady-shutterbug@2x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/palmeira.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/palmeira@2x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/the-beetle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/the-beetle@2x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/woodcraft.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/woodcraft@2x.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sample-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wheel-1000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wheel-2000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/wheel-500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,24 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ammar/GitHub/newolve.github.io&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/ammar/PycharmProjects/newolve.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
-        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -51,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733045309878</updated>
       <workItem from="1733045310900" duration="2055000" />
+      <workItem from="1738248170184" duration="104000" />
     </task>
     <servers />
   </component>
