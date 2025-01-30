@@ -1,346 +1,792 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Checklist</title>
-<style>
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 2rem;
-  background: #1a1a1a;
-  color: #e1e1e1;
-}
-/* General input and textarea styles */
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #404040;
-  border-radius: 8px;
-  background-color: #2d2d2d;
-  color: #e1e1e1;
-  font-size: 1rem;
-}
 
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-textarea::placeholder {
-  color: #9ca3af;
-}
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Attrakt Media</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  outline: none;
-  border-color: #60a5fa;
-  background-color: #333;
-}
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-textarea {
-  resize: none;
-}
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
 
-/* Labels for inputs */
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  color: #e1e1e1;
-}
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
-/* Existing styles omitted for brevity */
-.submit-container {
-  text-align: center;
-  margin-top: 2rem;
-}
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-button {
-  background-color: #60a5fa;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #4a90e2;
-}
-.logo-container {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.logo-container img {
-  max-width: 150px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.section {
-  background: #252525;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-  color: #60a5fa;
-  font-size: 1.5rem;
-  margin-top: 0;
-  border-bottom: 2px solid #404040;
-  padding-bottom: 0.5rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 1.2rem;
-  padding: 1rem;
-  background: #2d2d2d;
-  border-radius: 8px;
-  transition: transform 0.2s, background 0.2s;
-}
-
-li:hover {
-  transform: translateX(5px);
-  background: #333;
-}
-
-.timeline {
-  font-style: italic;
-  color: #94a3b8;
-  margin: 0.5rem 0 0 1.8rem;
-}
-
-.checkbox {
-  margin-right: 12px;
-  width: 18px;
-  height: 18px;
-  accent-color: #60a5fa;
-}
-
-label {
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-  color: #94a3b8;
-}
-
-p {
-  color: #d1d5db;
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-  
-  .section {
-    padding: 1rem;
-  }
-}
-/* Loading spinner styles */
-#loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  color: #fff;
-  flex-direction: column;
-}
-
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #ccc;
-  border-top: 5px solid #60a5fa;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-</style>
 </head>
-<body>
-  <form id="projectForm">
-    <div class="logo-container">
-      <img src="Newsletter.png" alt="Company Logo">
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/MEDIA-8.png" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
+                    <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                </ul>
+    
+                <p>Connecting brands with influencers to create campaigns that inspire and deliver measurable impact. Let us help you amplify your reach and engage with your audience in a way that matters.</p>
+    
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section">
+        <div class="video-background">
+            <!-- Video background -->
+            <video autoplay muted loop playsinline>
+                <source src="images/background-video.mp4" type="video/mp4">
+                <!-- Fallback if video doesn't load -->
+                <img src="images/img.png" alt="Background Image">
+            </video>
+        </div>
+  
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h1><span class="highlight">Elevating influencer impact</span></h1>
+                <p>
+                  We understand the art of collaboration between creators and brands.
+                  <br>
+                  The challenges, negotiations, and the time it takes to make every detail perfect - we handle it all.
+                </p>
+                <p>
+                  At <span class="highlight2">Attrakt Media</span>, we don't just help creators thrive — we empower your brand by helping you build impactful campaigns, meticulously connecting you with the right creators best suited for your needs.
+
+                <div class="home-content__buttons">
+                    <a href="#contact" class="smoothscroll btn btn--stroke">
+                        Start a Project
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-linkedin" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">Hello There</h3>
+                <h1 class="display-1 display-1--light">We are Attrakt Media</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                    At Attract Media, we bridge the gap between brands and influencers to create impactful collaborations. Our mission is to help brands amplify their reach and connect with their audiences authentically. By partnering with the right influencers, we craft campaigns that resonate, drive engagement, and deliver results.
+
+                    With a proven track record of success, Attract Media has brought together innovative brands and talented influencers to build lasting connections and drive measurable growth. Let’s create something extraordinary together.                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col ">
+                <div class="stats__count">556</div>
+                <h5>Successful Campaigns</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">895</div>
+                <h5>Influencers in Our Network</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">109</div>
+                <h5>Happy Brand Partners</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">1500000</div>
+                <h5>Total Audience Reach</h5> 
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">What We Do</h3>
+                <h1 class="display-2">We’ve got everything you need to launch and grow your brand.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-paint-brush"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Brand Identity</h3>
+                    <p>We help you define a unique brand identity that aligns with the right influencers to create authentic connections with your audience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-group"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Influencer Collaborations</h3>
+                    <p>Strategically match your brand with influencers who share your vision, ensuring campaigns resonate and deliver results.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-megaphone"></i>
+                </div>  
+                <div class="service-text">
+                    <h3 class="h2">Marketing Campaigns</h3>
+                    <p>Custom influencer marketing strategies designed to boost brand awareness, engagement, and conversions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-earth"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Content Creation</h3>
+                    <p>High-quality, engaging content crafted by influencers to tell your brand’s story and captivate your target audience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-cube"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Campaign Management</h3>
+                    <p>End-to-end management of your influencer campaigns, from planning and execution to performance analysis.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon"><i class="icon-lego-block"></i></div>
+                <div class="service-text">
+                    <h3 class="h2">Data-Driven Insights</h3>
+                    <p>Leverage analytics to measure campaign success and refine strategies for maximum ROI.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+                
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">Our Talent</h3>
+                    <h1 class="display-2 display-2--light">If you love what they do, check them out!</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        <div class="row works-content">
+            <div class="col-full masonry-wrap">
+                <div class="masonry">
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/AdeenBig.jpg" class="thumb-link" title="Ammar" data-size="1050x700">
+                                    <img src="images/portfolio/AdeenBig.jpg" 
+                                         srcset="images/portfolio/AdeenBig.jpg 1x, images/portfolio/AdeenBig.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Ammar Ahmad
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Youtube Creator
+                                </p>
+                            </div>
+    
+                            <a href="https://www.yotube.com/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>The best creator on Youtube</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/AmmarBig.jpg" class="thumb-link" title="Ammar" data-size="1050x700">
+                                    <img src="images/portfolio/AmmarBig.jpg" 
+                                         srcset="images/portfolio/AmmarBig.jpg 1x, images/portfolio/AmmarBig.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Ammar
+                                </h3>
+                                <p class="item-folio__cat">
+                                    twitch streamer
+                                </p>
+                            </div>
+    
+                            <a href="https://youtube.com" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Best streamer</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/Adeen2.jpg" class="thumb-link" title="Adeen2" data-size="1050x700">
+                                    <img src="images/portfolio/Adeen2.jpg"
+                                         srcset="images/portfolio/Adeen2.jpg 1x, images/portfolio/Adeen2.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Adeen2
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Instagram Influencer
+                                </p>
+                            </div>
+    
+                            <a href="https://www.youtube.com/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Best Instagram</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/Ammar2.jpg" class="thumb-link" title="Ammar2" data-size="1050x700">
+                                    <img src="images/portfolio/Ammar2.jpg" 
+                                         srcset="images/portfolio/Ammar2.jpg 1x, images/portfolio/Ammar2.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Youtube Creator
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Youtube Creator
+                                </p>
+                            </div>
+    
+                            <a href="https://www.youtube.com/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Best Creator in the world</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/AmmarBig.jpg" class="thumb-link" title="Ammar2" data-size="1050x700">
+                                    <img src="images/portfolio/Ammarbig.jpg" 
+                                         srcset="images/portfolio/AmmarBig.jpg 1x, images/portfolio/AmmarBig.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Instagram Influencer
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Instagram Influencer
+                                </p>
+                            </div>
+    
+                            <a href="https://www.youtube.com/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Best Guy</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+    
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/AdeenBig.jpg" class="thumb-link" title="Adeen" data-size="1050x700">
+                                    <img src="images/portfolio/AdeenBig.jpg"
+                                         srcset="images/portfolio/AdeenBig.jpg 1x, images/portfolio/AdeenBig.jpg 2x" alt="">
+                                </a>
+                            </div>
+    
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Adeen Big
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Adeen Big
+                                </p>
+                            </div>
+    
+                            <a href="https://www.youtube.com/" class="item-folio__project-link" title="Project link">
+                                <i class="icon-link"></i>
+                            </a>
+    
+                            <div class="item-folio__caption">
+                                <p>Best streamer</p>
+                            </div>
+    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                </div> <!-- end masonry -->
+            </div> <!-- end col-full -->
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Our Clients</h3>
+                <h1 class="display-2">Attrakt Media is proud to partner with these amazing brands.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div class="col-full">
+                <div class="clients">
+                    
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/apple.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/atom.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/blackberry.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/dropbox.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/envato.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/firefox.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/joomla.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/magento.png" /></a>
+                     
+                </div> <!-- end clients -->
+            </div> <!-- end col-full -->
+        </div> <!-- end clients-outer -->
+
+        <div class="row clients-testimonials" data-aos="fade-up">
+            <div class="col-full">
+                <div class="testimonials">
+
+                    <div class="testimonials__slide">
+
+                        <p>We have had the privilege of collaborating with forward-thinking brands to bring their vision to life through authentic influencer marketing. From global leaders to innovative startups, our partners trust us to connect them with the right influencers and audiences.</p>
+
+                    </div>
+
+                    <div class="testimonials__slide">
+                        
+                        <p>Every partnership tells a story of creativity, innovation, and impactful results. Join the growing list of brands transforming the way they connect with their audiences.</p>
+
+                        <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Sundar Pichai</span> 
+                            <span class="testimonials__pos">CEO, Google</span>
+                        </div>
+
+                    </div>
+
+                    <div class="testimonials__slide">
+                        
+                        <p>wow best</p>
+
+                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                        </div>
+
+                    </div>
+
+                </div><!-- end testimonials -->
+                
+            </div> <!-- end col-full -->
+        </div> <!-- end client-testimonials -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out to amplify your brand image!</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+            
+            <div class="contact-primary">
+
+                <h3 class="h6">Send Us A Message</h3>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            Pakistan Zindabad<br>
+                            DHA Phase 6, Lahore<br>
+                            54000 PK
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Email Us At</h5>
+                        <p>
+                            business@attraktmedia.com<br>
+                            info@attraktmedia.com
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Call Us At</h5>
+                        <p>
+                            Phone: (+1) 555 5555<br>
+                            Mobile: (+1) 555 5555<br>
+                            Fax: (+1) 555 5555
+                        </p>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+
+                <div class="footer-logo"></div>
+                Connecting brands with influencers to create campaigns that inspire and deliver measurable impact. Let us help you amplify your reach and engage with your audience in a way that matters.
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h4>Get Notified</h4>
+                Subscribe to our newsletter and get the latest updates on influencer trends, marketing tips, and success stories delivered straight to your inbox. <br>
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Attrakt Media 2024</span> 
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
-    <h1>Project Checklist</h1>
-    <div class="section">
-      <h2>Front-End Features</h2>
-      <ul>
-        <li>
-          <input type="checkbox" class="checkbox" id="theme-design" name="theme_design">
-          <label for="theme-design">Theme Design - Custom design for a cohesive brand identity.</label>
-          <p class="timeline">Timeline: 2-3 weeks</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="about-us" name="about_us">
-          <label for="about-us">About Us Page - Comprehensive page detailing mission, values, and history.</label>
-          <p class="timeline">Timeline: 1 week</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="our-brands" name="our_brands">
-          <label for="our-brands">Our Brands Section - Dedicated section showcasing company brands.</label>
-          <p class="timeline">Timeline: 1 week</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="distribution-network" name="distribution_network">
-          <label for="distribution-network">Distribution Network Page - Highlighting channels and network.</label>
-          <p class="timeline">Timeline: 1 week</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="article-blogs" name="article_blogs">
-          <label for="article-blogs">Article Blogs - Blog section for publishing articles, news, and updates.</label>
-          <p class="timeline">Timeline: 2 weeks</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="forms" name="forms">
-          <label for="forms">Forms - Integration of various user interaction forms.</label>
-          <p class="timeline">Timeline: 1 week</p>
-        </li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>Back-End Features</h2>
-      <ul>
-        <li>
-          <input type="checkbox" class="checkbox" id="cms-development" name="cms_development">
-          <label for="cms-development">CMS Development - Efficient content management system.</label>
-          <p class="timeline">Timeline: 3-4 weeks</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="captcha-integration" name="captcha_integration">
-          <label for="captcha-integration">CAPTCHA Integration - Enhance security by preventing automated submissions.</label>
-          <p class="timeline">Timeline: 2-3 days</p>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="google-analytics" name="google_analytics">
-          <label for="google-analytics">Google Analytics & GTM Integration - Advanced tracking and analysis.</label>
-          <p class="timeline">Timeline: 1 week</p>
-        </li>
-      </ul>
-    </div>
-    <div class="section">
-      <h2>Additional Information</h2>
-      <textarea id="additionalInfo" name="additional_info" placeholder="Type additional information here..." rows="5" style="width: 100%;"></textarea>
-    </div>
-    <div class="section">
-      <h2>User Information</h2>
-      <label for="userName">Name:</label>
-      <input type="text" id="userName" name="user_name" placeholder="Your name" style="width: 100%; margin-bottom: 10px;" required>
-      
-      <label for="userEmail">Email:</label>
-      <input type="email" id="userEmail" name="user_email" placeholder="Your email address" style="width: 100%;" required>
-    </div>
-  </form>
-  <div class="section">
-    <h2>Overall Project Duration</h2>
-    <p>Front-End Development: 6-8 weeks</p>
-    <p>Back-End Development: 4-5 weeks</p>
-    <p>Total Project Duration: 10-12 weeks (including testing and feedback cycles)</p>
-  </div>
-  <div class="submit-container">
-    <button type="button" id="submitBtn">Submit</button>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-  emailjs.init("FAW6Ijca5Vy0V4Qry");
 
-  document.getElementById("submitBtn").addEventListener("click", function () {
-    const form = document.getElementById("projectForm");
 
-    // Get user-provided additional information, name, and email
-    const userName = form.elements["user_name"].value.trim();
-    const userEmail = form.elements["user_email"].value.trim();
-    const additionalInfo = form.elements["additional_info"].value.trim();
-
-    // Build the message content dynamically
-    let message = "Project Checklist:\n";
-    message += `- Theme Design: ${form.elements["theme_design"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- About Us: ${form.elements["about_us"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- Our Brands: ${form.elements["our_brands"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- Distribution Network: ${form.elements["distribution_network"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- Article Blogs: ${form.elements["article_blogs"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- Forms: ${form.elements["forms"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- CMS Development: ${form.elements["cms_development"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- CAPTCHA Integration: ${form.elements["captcha_integration"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `- Google Analytics: ${form.elements["google_analytics"].checked ? "Checked" : "Unchecked"}\n`;
-    message += `\nAdditional Information:\n${additionalInfo || "No additional information provided."}\n`;
-
-    // Prepare the data object to match the EmailJS template variables
-    const data = {
-      from_name: userName || "Anonymous User", // Default to "Anonymous User" if name is empty
-      user_email: userEmail,
-      message: message, // Full message content
-    };
-
-    console.log("Data being sent:", data);
-
-    // Validate required fields
-    if (!userName || !userEmail) {
-      alert("Please provide your name and email.");
-      return;
-    }
-        // Show loading symbol
-    const loadingDiv = document.createElement("div");
-    loadingDiv.id = "loading";
-    loadingDiv.innerHTML = `<div class="spinner"></div><p>Sending...</p>`;
-    document.body.appendChild(loadingDiv);
-    // Send the email using EmailJS
-    emailjs.send("service_sqmt1l7", "template_ujc0rw4", data)
-      .then(() => {
-        setTimeout(() => {
-          document.getElementById("loading").remove(); // Remove loading symbol
-          alert("Form successfully sent!");
-        }, 5000); // Show the loading symbol for 5 seconds
-      })
-      .catch((error) => {
-        setTimeout(() => {
-          document.getElementById("loading").remove(); // Remove loading symbol
-          alert("Failed to send the form. Please try again.");
-          console.error("EmailJS Error:", error);
-        }, 5000); // Show the loading symbol for 5 seconds
-      });
-  });
-</script>
-
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
+</html>
