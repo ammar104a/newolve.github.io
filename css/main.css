@@ -1,4 +1,4 @@
- .highlight {
+.highlight {
     color: #930606;
     font-weight: 700;
 }
@@ -1204,7 +1204,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .display-1--light {
-    color: #930606;
+    color: #ffffff;
 }
 
 .display-2 {
@@ -1216,7 +1216,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .display-2--light {
-    color: #959595;
+    color: #ffffff;
 }
 
 .subhead + .display-2 {
@@ -1235,7 +1235,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .subhead--dark {
-    color: #000000;
+    color: #930606;
 }
 
 
@@ -1427,7 +1427,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .header-logo {
     display:flexbox;
     position: absolute;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-left: 0; /* moved logo further left */
     padding: 0;
     left: 0px;
     top: 50%;
@@ -1439,7 +1440,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-logo a {
     display: block;
-    margin: 9px 0 0 0;
+    margin-top: 10px;
     padding: 0;
     outline: 0;
     border: none;
@@ -1733,6 +1734,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+.s-home p {
+    font-family: "montserrat-regular", sans-serif;
+    color: #FFFFFF;
+
 }
 
 .s-home .shadow-overlay {
@@ -2193,8 +2200,13 @@ html.no-csstransitions .home-content__main {
     linear-gradient(180deg, rgba(255, 0, 0, 0.12) 0%, transparent 25%),
     linear-gradient(90deg, rgba(255, 0, 0, 0.12) 0%, transparent 40%),
     linear-gradient(270deg, rgba(255, 0, 0, 0.12) 0%, transparent 30%),
+    linear-gradient(0deg, rgba(255, 0, 0, 0.12) 0%, transparent 30%),
     #000000;
     /*color: #FFFFFF;*/
+}
+
+.s-about p{
+    color: #c3c3c3;
 }
 
 .s-about .section-header.has-bottom-sep::before {
@@ -2365,12 +2377,20 @@ html.no-csstransitions .home-content__main {
     background: 
     linear-gradient(90deg, rgba(255, 0, 0, 0.12) 0%, transparent 40%),
     linear-gradient(270deg, rgba(255, 0, 0, 0.12) 0%, transparent 30%),
+    linear-gradient(360deg, rgba(255, 0, 0, 0.12) 0%, transparent 30%),
+    linear-gradient(180deg, rgba(255, 0, 0, 0.12) 0%, transparent 30%),
     #000000;
-    color: #757575;
+    color: #c3c3c3;
     position: relative;
 }
 
+.s-services h1 {
+    color: #FFFFFF;
+}
 
+.s-services .h2 {
+    color: #FFFFFF;
+}
 /* ------------------------------------------------------------------- 
  * ## services list
  * ------------------------------------------------------------------- */
@@ -3611,5 +3631,19 @@ footer .row {
     }
 }
 
+
+.newheadingsbyammar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50rem; /* Uses rem units for responsive spacing */
+  }
+  
+  .newheadingsbyammar h3 {
+    color: #930606;
+    font-style: italic;
+    margin: 0;
+  }
+  
 
 /*# sourceMappingURL=main.css.map */
