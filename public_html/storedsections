@@ -1,0 +1,130 @@
+   <!-- Portfolio section -->
+   <!-- <section id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-subtitle">Our Awesome Works</h6>
+            <h6 class="section-title mb-5">Our Portfolio</h6>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/folio-1.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/folio-2.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/folio-3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/folio-4.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/folio-5.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="assets/imgs/folio-6.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>Project Title</h5>
+                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                            </div>                              
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of portfolio section -->
+
+
+
+
+
+
+    div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="assets/imgs/avatar-3.jpg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">App Designer</h6>
+                            <h5 class="card-title">Ashley Diaz</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+                            <div class="socials">
+                                <a href="javascript:void(0)"><i class="ti-facebook"></i> </a>
+                                <a href="javascript:void(0)"><i class="ti-github"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-dropbox"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="assets/imgs/avatar-4.jpg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">Developer</h6>
+                            <h5 class="card-title">Edward Harris</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+                            <div class="socials">
+                                <a href="javascript:void(0)"><i class="ti-facebook"></i> </a>
+                                <a href="javascript:void(0)"><i class="ti-github"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-dropbox"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="assets/imgs/avatar-5.jpg">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">photographer</h6>
+                            <h5 class="card-title">Brian Scott</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+                            <div class="socials">
+                                <a href="javascript:void(0)"><i class="ti-facebook"></i> </a>
+                                <a href="javascript:void(0)"><i class="ti-github"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-dropbox"></i></a>
+                                <a href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
